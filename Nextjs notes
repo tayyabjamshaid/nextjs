@@ -1,0 +1,43 @@
+Next.js
+=>Public folder me hum jo b file daly gy wo url me access kr skty ha
+Idr srf wohi file dalni ha jisy hum chahty k user ko access hu,not add private/secret data in it
+
+=>Nextjs is both  a frontend and backend framework.We can make api routes in api page
+=>In lazy loading of Images,jo hamai videos show hu rhi ha screen pr unhi ki images screen pr show krwaiy ga,jesy he scrolldown kry gy,tu dosari videos ki images show krwaiy ga
+
+=>For global css,add your css file in _app.js bcoz hamari nextjs ki hr file yehi sy he upload hu gi
+
+CODE:
+---------
+import '../styles/globals.css'
+import "../styles/styles.css"   //just add here
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}
+export default MyApp
+--------
+
+=>style component kisi b particular component me css add krny ka tariqa ha
+
+CODE:
+---------
+import React from 'react'
+
+const Dummy = () => {
+  return (
+    <>
+    <style jsx global>{   //by using global in it,it will apply in all project who is using span
+      `span{
+        color:red
+      }`
+      }</style>
+    <div><span>Dummy</span></div></>
+  )
+}
+
+export default Dummy
+-----------------------
+
+
+
+
